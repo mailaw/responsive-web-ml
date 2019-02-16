@@ -14,7 +14,8 @@
 var myLabel = setInterval(setLabel, 50);
 var pos = 0;
 function setLabel() {
-  idName = ["select-el", "img-el", "p-el"];
+  //
+  var idName = ["select-el", "img-el", "p-el"];
   for (i = 0; i < idName.length; i++) {
     var elem = document.getElementById(idName[i]);
     elem.style.position = "relative";
