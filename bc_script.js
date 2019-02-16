@@ -11,9 +11,6 @@
 //   console.log("boss" + pos);
 //   console.log("label");
 // }
-setTimeout(setLabel, 8000);
-setTimeout(setInterval, 8000);
-setTimeout(myLabel, 8000);
 
 var myLabel = setInterval(setLabel, 50);
 var pos = 0;
@@ -21,10 +18,7 @@ function setLabel() {
   var idName = document
     .getElementById("all-content")
     .querySelectorAll("p, h1, iframe");
-  //
-  // 69 idName = ["select-el", "img-el", "p-el"];
   for (i = 0; i < idName.length; i++) {
-    // 69 var elem = document.getElementById(idName[i]);
     var elem = idName[i];
     elem.style.position = "relative";
     elem.style.display = "inline-block";
@@ -45,9 +39,7 @@ function setLabel() {
     .getElementById("all-content")
     .querySelectorAll("h2, h3");
 
-  // 69 idName = ["select-el", "img-el", "p-el"];
   for (i = 0; i < idName2.length; i++) {
-    // 69 var elem = document.getElementById(idName[i]);
     var elem = idName2[i];
     elem.style.position = "relative";
     elem.style.display = "inline-block";
