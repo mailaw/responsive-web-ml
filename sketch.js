@@ -8,12 +8,11 @@ let trainButton;
 let obnoxiousVAR = "HAYOOO";
 var windowWidth = windowWidth;
 //PAGE CONTENT
-//var movingWords = [];
 
 //MODEL
 function modelReady() {
   console.log("Model is ready!!!");
-  classifier.load("model.json", customModelReady);
+  classifier.load("model (4).json", customModelReady);
 }
 
 function customModelReady() {
@@ -40,30 +39,35 @@ function setup() {
   classifier = mobilenet.classification(video, videoReady); //can only hook in when mobilenet is ready
 
   //USE THESE BUTTONS FOR TRAINING
-  //   happyButton = createButton("right");
-  //   happyButton.mousePressed(function() {
-  //     classifier.addImage("right");
-  //   });
+  rightButton = createButton("right");
+  rightButton.mousePressed(function() {
+    classifier.addImage("right");
+  });
 
   //   centerButton = createButton("center");
   //   centerButton.mousePressed(function() {
   //     classifier.addImage("center");
   //   });
 
-  //   sadButton = createButton("left");
-  //   sadButton.mousePressed(function() {
-  //     classifier.addImage("left");
-  //   });
+  noneButton = createButton("none");
+  noneButton.mousePressed(function() {
+    classifier.addImage("none");
+  });
 
-  //   trainButton = createButton("train");
-  //   trainButton.mousePressed(function() {
-  //     classifier.train(whileTraining);
-  //   });
+  leftButton = createButton("left");
+  leftButton.mousePressed(function() {
+    classifier.addImage("left");
+  });
 
-  //   saveButton = createButton("save");
-  //   saveButton.mousePressed(function() {
-  //     classifier.save();
-  //   });
+  trainButton = createButton("train");
+  trainButton.mousePressed(function() {
+    classifier.train(whileTraining);
+  });
+
+  saveButton = createButton("save");
+  saveButton.mousePressed(function() {
+    classifier.save();
+  });
 }
 
 function draw() {
@@ -75,14 +79,14 @@ function draw() {
   text(label, 10, height - 10);
 }
 
-// function whileTraining(loss) {
-//   if (loss == null) {
-//     console.log("Training Complete");
-//     classifier.classify(gotResults);
-//   } else {
-//     console.log(loss);
-//   }
-// }
+function whileTraining(loss) {
+  if (loss == null) {
+    console.log("Training Complete");
+    classifier.classify(gotResults);
+  } else {
+    console.log(loss);
+  }
+}
 
 function gotResults(error, result) {
   if (error) {
