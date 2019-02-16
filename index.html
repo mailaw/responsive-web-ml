@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>image_classification</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.1.3/dist/ml5.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1 id="select-el">This is the header</h1>
+    <!----button onclick="setLabel()">Activate</button-->
+
+    <img
+      id="img-el"
+      src="https://daily.bandcamp.com/2019/02/15/bandcamp-essential-releases-february-15-2019/7essential_02-15-1244/"
+      data-orig-file="https://bandcampblog.files.wordpress.com/2019/02/7essential_02-15-1244.jpg?w=800"
+      data-orig-size="1244,646"
+      data-comments-opened="1"
+      data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
+      data-image-title="7essential_02-15-1244"
+      data-image-description=""
+      data-medium-file="https://bandcampblog.files.wordpress.com/2019/02/7essential_02-15-1244.jpg?w=800?w=300"
+      data-large-file="https://bandcampblog.files.wordpress.com/2019/02/7essential_02-15-1244.jpg?w=800?w=800"
+      class="alignnone size-full wp-image-99079"
+      src="https://bandcampblog.files.wordpress.com/2019/02/7essential_02-15-1244.jpg?w=800"
+      alt="7 essentials"
+      srcset="
+        https://bandcampblog.files.wordpress.com/2019/02/7essential_02-15-1244.jpg?w=800   800w,
+        https://bandcampblog.files.wordpress.com/2019/02/7essential_02-15-1244.jpg?w=150   150w,
+        https://bandcampblog.files.wordpress.com/2019/02/7essential_02-15-1244.jpg?w=300   300w,
+        https://bandcampblog.files.wordpress.com/2019/02/7essential_02-15-1244.jpg?w=768   768w,
+        https://bandcampblog.files.wordpress.com/2019/02/7essential_02-15-1244.jpg?w=1024 1024w,
+        https://bandcampblog.files.wordpress.com/2019/02/7essential_02-15-1244.jpg        1244w
+      "
+      sizes="(max-width: 800px) 100vw, 800px"
+    />
+    <p id="p-el">
+      Anemone is the dreamy psych-pop brainchild of Chloé Soldevila, a
+      classically-trained, jazz-fluent performer from Montreal. Ironically for
+      an album recorded in the dead of a harsh Canadian winter, their debut Beat
+      My Distance resembles the aural equivalent of a beach-town postcard, its
+      airy shoegaze atmosphere drifting in and out at a leisurely tide. That
+      calming, sun-dappled backdrop, in turn, helps Soldevila’s sweet,
+      simplistic hooks ripen to perfection: organic alchemy at its finest. Such
+      is Soldevila’s goal with the LP, a clearly-stated one at that; on the
+      early-half, Slowdive-esque highlight “Daffodils,” she proclaims, “Where
+      you go, I want to be a hole inside your head.” And judging by the sound of
+      Beat My Distance, this promising upstarts gets what she wants, without
+      fail.
+    </p>
+  </body>
+</html>
